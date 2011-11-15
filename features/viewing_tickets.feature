@@ -9,12 +9,12 @@ Feature: Viewing tickets
       | user@ticketee.com | password |
     And I am signed in as them
     Given there is a project called "TextMate 2"
-    And "user@ticketee.com" can view "TextMate 2" project
+    And "user@ticketee.com" can view the "TextMate 2" project
     And "user@ticketee.com" has created a ticket for this project:
       | title          | description                   |
       | Make it shiny! | Gradients! Starbursts! Oh my! |
     And there is a project called "Internet Explorer"
-    And "user@ticketee.com" can view "Internet Explorer" project
+    And "user@ticketee.com" can view the "Internet Explorer" project
     And "user@ticketee.com" has created a ticket for this project:
       | title                | description   |
       | Standards compliance | Isn't a joke. |
@@ -35,9 +35,3 @@ Feature: Viewing tickets
     When I follow "Standards compliance"
     Then I should see "Standards compliance" within "#ticket h2"
     And I should see "Isn't a joke"
-    
-  
-  
-  
-
-

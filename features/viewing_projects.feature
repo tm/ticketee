@@ -10,7 +10,7 @@ Feature: Viewing projects
     And I am signed in as them
     And there is a project called "TextMate 2"
     And there is a project called "Internet Explorer"
-    And "user@ticketee.com" can view "TextMate 2" project
+    And "user@ticketee.com" can view the "TextMate 2" project
   
   Scenario: Listing all projects
     And I am on the homepage
