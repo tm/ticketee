@@ -15,9 +15,10 @@ gem 'rack', '1.3.3'
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
-  gem 'dynamic_form'
   gem 'uglifier'
 end
+
+gem 'dynamic_form'
 
 gem 'jquery-rails'
 
@@ -44,3 +45,4 @@ end
 
 gem 'devise', '~> 1.4.3'
 gem 'cancan'
+gem 'paperclip'
