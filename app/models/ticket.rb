@@ -13,11 +13,16 @@ class Ticket < ActiveRecord::Base
   
   
   def tag!(tags)
-    tags = tags.split(" ").map do |tag|
-      Tag.find_or_create_by_name(tag)
-    end
     
-    self.tags << tags
+    until tags.nil?
+      
+      tags = tags.split(" ").map do |tag|
+        Tag.find_or_create_by_name(tag)
+      end
+      self.tags << tags
+            
+    end    
+    
   end
   
 end
