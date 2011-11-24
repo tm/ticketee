@@ -59,6 +59,7 @@ describe TicketsController do
         response.should redirect_to(project)
         flash[:alert].should eql("You cannot delete tickets from this project.")
       end
+
       
     end
     
