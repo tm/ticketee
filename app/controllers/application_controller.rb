@@ -14,4 +14,5 @@ class ApplicationController < ActionController::Base
     def find_states
       @states = State.all
     end
+
 end

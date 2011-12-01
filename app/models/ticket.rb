@@ -1,10 +1,13 @@
 class Ticket < ActiveRecord::Base
+  has_and_belongs_to_many :watchers, :join_table => "ticket_watchers", :class_name => "User"
+
+  after_create :creator_watches_me
   
   searcher do
     label :tag, :from => :tags, :field => :name
     label :state, :from => :state, :field => :name
   end
-  
+
   belongs_to :project
   belongs_to :user
   validates :title, :presence => true
@@ -25,5 +28,11 @@ class Ticket < ActiveRecord::Base
       self.tags << tags
     end
   end
+
+
+  private
+    def creator_watches_me
+      self.watchers << user
+    end
   
 end

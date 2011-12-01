@@ -6,6 +6,7 @@ class TagsController < ApplicationController
       @ticket.tags -= [@tag]
       
       @ticket.save
+      
     end
   end
 end

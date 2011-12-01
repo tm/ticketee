@@ -37,4 +37,3 @@ Feature: Searching
     And I follow "iteration_1"
     Then I should see "Tag!"
     And I should not see "Tagged!"
-  

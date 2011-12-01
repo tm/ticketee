@@ -57,4 +57,3 @@ Feature: Creating Tickets
     Then I should see "Ticket has been created."
     And I should see "browser" within "#ticket #tags"
     And I should see "visual" within "#ticket #tags"
-  

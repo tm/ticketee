@@ -9,7 +9,6 @@ gem 'sqlite3'
 
 gem 'rack', '1.3.3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -48,3 +47,5 @@ gem 'devise', '~> 1.4.3'
 gem 'cancan'
 gem 'paperclip'
 gem 'searcher'
+
+

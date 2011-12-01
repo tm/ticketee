@@ -32,10 +32,4 @@ Feature: Creating Users
     And I check "Is an admin?"
     And I press "Create User"
     Then I should see "User has been created"
-    And I should see "newadmin@ticketee.com (Admin)"
-  
-  
-  
-  
-  
-  
+    And I should see "newadmin@ticketee.com (Admin)" 
