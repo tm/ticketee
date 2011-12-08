@@ -8,6 +8,14 @@ Ticektee::Application.routes.draw do
     end
   end
 
+  namespace :api do 
+    namespace :v2 do 
+      resources :projects do
+        resources :tickets
+      end
+    end
+  end
+
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   get '/awaiting_confirmation', :to => "users#confirmation", :as => "confirm_user"
