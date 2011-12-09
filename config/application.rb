@@ -46,5 +46,6 @@ module Ticektee
     config.assets.version = '1.0'
 
     config.active_record.observers = :comment_observer
+    config.action_mailer.default_url_options = { :host => "ticketeeapp.com" }
   end
 end
