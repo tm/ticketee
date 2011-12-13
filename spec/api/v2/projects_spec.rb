@@ -35,7 +35,6 @@ describe "/api/v1/projects", :type => :api do
 
       projects.all? do |p|
         p["project"]["name"].blank?
-      end.should be_true
     end
 
     it "XML" do

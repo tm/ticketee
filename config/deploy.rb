@@ -35,3 +35,7 @@ task :symlink_database_yml do
  run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
 after "bundle:install", "symlink_database_yml"
+
+after 'deploy:update_code' do
+  run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
+end
