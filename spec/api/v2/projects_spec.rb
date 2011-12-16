@@ -35,6 +35,7 @@ describe "/api/v1/projects", :type => :api do
 
       projects.all? do |p|
         p["project"]["name"].blank?
+      end
     end
 
     it "XML" do
@@ -152,5 +153,3 @@ describe "/api/v1/projects", :type => :api do
   end
 
 end
-
-
