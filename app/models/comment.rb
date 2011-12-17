@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   after_create :set_ticket_state
   after_create :creator_watches_ticket
   
-  belongs_to :ticket
+  belongs_to :ticket, :touch => true
   delegate :project, :to => :ticket 
   
   belongs_to :user
